@@ -20,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
     async function getTransactions() {
         try {
             // don't need to add base URL because of proxy
-            const res = await axios.get('http://localhost:5000/api/v1/transactions');
+            const res = await axios.get('/api/v1/transactions');
             dispatch({
                 type: 'GET_TRANSACTIONS',
                 payload: res.data.data
@@ -35,7 +35,7 @@ export const GlobalProvider = ({ children }) => {
 
     async function deleteTransaction(id) {
         try {
-            await axios.delete(`http://localhost:5000/api/v1/transactions/${id}`);
+            await axios.delete(`/api/v1/transactions/${id}`);
             dispatch({
                 type: 'DELETE_TRANSACTION',
                 payload: id

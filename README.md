@@ -52,4 +52,17 @@ npm run server
 npm run client
 ```
 
+- Build client (do this first before running in production):
+
+```
+cd client
+npm run build
+```
+
+- Run production:
+
+```
+npm start
+```
+
 
