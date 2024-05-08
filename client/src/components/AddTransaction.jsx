@@ -4,16 +4,18 @@ import { GlobalContext } from '../context/GlobalState';
 export const AddTransaction = () => {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
+    const [transactionType, setTransactionType] = useState('income');
 
     const { addTransaction } = useContext(GlobalContext);
 
     const onSubmit = (e) => {
         e.preventDefault();
 
+        const newAmount = transactionType === 'expense' ? -Math.abs(amount) : Math.abs(amount);
+
         const newTransaction = {
-            id: Math.floor(Math.random() * 1000000000),
             text,
-            amount: +amount // convert to number
+            amount: newAmount // convert to number
         }
 
         addTransaction(newTransaction);
@@ -28,9 +30,15 @@ export const AddTransaction = () => {
                     <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
                 </div>
                 <div className="form-control">
+                    <label htmlFor="transactionType">Transaction Type</label>
+                    <select value={transactionType} onChange={(e) => setTransactionType(e.target.value)}>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+                <div className="form-control">
                     <label htmlFor="amount">
                         Amount <br />
-                        (negative - expense, positive - income)
                     </label>
                     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
                 </div>
