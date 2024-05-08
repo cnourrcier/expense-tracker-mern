@@ -1,6 +1,4 @@
-# React Expense Tracker (For Client side only)
-
-* this file is for running just the client side. For full MERN please see README.md in project root directory.
+# MERN Expense Tracker
 
 Expense Tracker allows users to track their incomes and expenses, view a list of positive and negative transactions, and see their total income, total expenses, and overall balance.
 
@@ -15,17 +13,43 @@ Expense Tracker allows users to track their incomes and expenses, view a list of
 
 1. Clone this repository to your local machine.
 
-2. Navigate to the /client directory.
-
-3. Install the dependencies:
+2. Navigate to the project directory and install the dependencies:
 
 ```
 npm install
 ```
 
-4. Start the development server: 
+3. Navigate to /client and install front end dependencies: 
+
+```
+cd client
+npm install
+```
+
+4. Navigate back to to project directory:
+
+```
+cd ..
+```
+
+5. Options to run app:
+
+- Run frontend and backend: 
+
 ```
 npm run dev
 ```
 
-5. Open a web browser and navigate to the specified URL in the terminal.
+- Run backend only:
+
+```
+npm run server
+```
+
+- Run frontend only:
+
+```
+npm run client
+```
+
+
