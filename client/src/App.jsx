@@ -12,15 +12,21 @@ function App() {
 
   return (
     <GlobalProvider>
-      <div className="container">
-        <div className='pie-chart-container'>
-          <PieChart />
-        </div>
-        <div className='content-container'>
+      <div className="container-fluid">
+        <div className="row">
           <Header />
-          <Balance />
-          <IncomeExpenses />
-          <TransactionList />
+        </div>
+        <div className="row">
+          <div className='col'>
+            <PieChart />
+            <Balance />
+            <IncomeExpenses />
+          </div>
+          <div className='col'>
+            <TransactionList />
+          </div>
+        </div>
+        <div className="row">
           <AddTransaction />
         </div>
       </div>

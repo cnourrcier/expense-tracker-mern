@@ -2,6 +2,8 @@
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --incomeColor: #0FD260;
+  --expenseColor: #F84E3B;
 }
 
 * {
@@ -20,23 +22,6 @@ body {
   font-size: 18px;
 }
 
-.container {
-  margin: 30px auto;
-  width: 800px;
-  display: flex;
-}
-
-.pie-chart-container {
-  flex: 1;
-  /* Takes up remaining space */
-  margin-right: 20px;
-}
-
-.content-container {
-  flex: 2;
-  /* Takes up 2/3 of the container */
-}
-
 h1 {
   letter-spacing: 1px;
   margin: 0;
@@ -53,13 +38,17 @@ h4 {
   text-transform: uppercase;
 }
 
+.container-fluid {
+  padding: 40px;
+}
+
 .inc-exp-container {
   background-color: #fff;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
 .inc-exp-container>div {
@@ -71,6 +60,19 @@ h4 {
   border-right: 1px solid #dedede;
 }
 
+.balance-container {
+  margin-top: 30px;
+  border-bottom: 1px solid #bbb;
+}
+
+.balance-container .plus {
+  color: var(--incomeColor);
+}
+
+.balance-container .minus {
+  color: var(--expenseColor);
+}
+
 .money {
   font-size: 20px;
   letter-spacing: 1px;
@@ -78,11 +80,11 @@ h4 {
 }
 
 .money-plus {
-  color: #2ecc71;
+  color: var(--incomeColor);
 }
 
 .money-minus {
-  color: #c0392b;
+  color: var(--expenseColor);
 }
 
 label {
@@ -111,7 +113,7 @@ select {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #008FFB;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -131,6 +133,7 @@ select {
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
+  min-width: 350px;
 }
 
 .list li {
@@ -145,16 +148,16 @@ select {
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid var(--incomeColor);
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+  border-right: 5px solid var(--expenseColor);
 }
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
+  background-color: var(--expenseColor);
   border: 0;
   color: #fff;
   font-size: 20px;
