@@ -22,7 +22,19 @@ body {
 
 .container {
   margin: 30px auto;
-  width: 400px;
+  width: 800px;
+  display: flex;
+}
+
+.pie-chart-container {
+  flex: 1;
+  /* Takes up remaining space */
+  margin-right: 20px;
+}
+
+.content-container {
+  flex: 2;
+  /* Takes up 2/3 of the container */
 }
 
 h1 {

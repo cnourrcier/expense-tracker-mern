@@ -4,6 +4,7 @@ import { Balance } from './components/Balance';
 import { IncomeExpenses } from './components/IncomeExpenses';
 import { TransactionList } from './components/TransactionList';
 import { AddTransaction } from './components/AddTransaction';
+import { PieChart } from './components/PieChart';
 
 import { GlobalProvider } from './context/GlobalState';
 
@@ -11,12 +12,17 @@ function App() {
 
   return (
     <GlobalProvider>
-      <Header />
       <div className="container">
-        <Balance />
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
+        <div className='pie-chart-container'>
+          <PieChart />
+        </div>
+        <div className='content-container'>
+          <Header />
+          <Balance />
+          <IncomeExpenses />
+          <TransactionList />
+          <AddTransaction />
+        </div>
       </div>
     </GlobalProvider>
   )

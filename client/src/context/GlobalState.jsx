@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import AppReducer from './AppReducer';
 import axios from 'axios';
 
@@ -32,6 +32,12 @@ export const GlobalProvider = ({ children }) => {
             })
         }
     }
+
+    useEffect(() => {
+        getTransactions();
+        // to stop the warning:
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     async function deleteTransaction(id) {
         try {

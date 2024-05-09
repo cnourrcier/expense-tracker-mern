@@ -4,13 +4,7 @@ import { Transaction } from './Transaction';
 
 export const TransactionList = () => {
   // const context = useContext(GlobalContext);
-  const { transactions, getTransactions } = useContext(GlobalContext);
-
-  useEffect(() => {
-    getTransactions();
-    // to stop the warning:
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const { transactions } = useContext(GlobalContext);
 
   return (
     <>

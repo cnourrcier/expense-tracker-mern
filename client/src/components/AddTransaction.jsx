@@ -15,7 +15,8 @@ export const AddTransaction = () => {
 
         const newTransaction = {
             text,
-            amount: newAmount // convert to number
+            amount: newAmount,
+            transactionType
         }
 
         addTransaction(newTransaction);
