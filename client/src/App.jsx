@@ -12,7 +12,7 @@ function App() {
 
   return (
     <GlobalProvider>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <Header />
         </div>
@@ -22,7 +22,7 @@ function App() {
             <Balance />
             <IncomeExpenses />
           </div>
-          <div className='col'>
+          <div className='col transactions-container'>
             <TransactionList />
           </div>
         </div>

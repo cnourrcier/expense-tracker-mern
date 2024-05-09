@@ -3,6 +3,9 @@ import React from 'react'
 
 export const Header = () => {
   return (
-    <h2 className="h1 display-1 text-center">Expense Tracker</h2>
+    <>
+      <h1>MOOLA</h1>
+      <p className="subheader"><i>Expense Tracker</i></p>
+    </>
   )
 }

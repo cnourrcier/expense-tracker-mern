@@ -4,6 +4,9 @@
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --incomeColor: #0FD260;
   --expenseColor: #F84E3B;
+  --subheader: #02af4a;
+  --headerGrad: #85e9af;
+
 }
 
 * {
@@ -23,8 +26,28 @@ body {
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 500;
+  background-image: linear-gradient(to left, var(--incomeColor), var(--headerGrad));
   letter-spacing: 1px;
   margin: 0;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.subheader {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  letter-spacing: 1px;
+  margin-top: -10;
+  color: var(--subheader);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 h3 {
@@ -48,7 +71,7 @@ h4 {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 0 0;
+  margin: 20px 0;
 }
 
 .inc-exp-container>div {
@@ -92,6 +115,16 @@ label {
   margin: 10px 0;
 }
 
+.form-control {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 1px;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
 input[type='text'],
 input[type='number'] {
   border: 1px solid #dedede;
@@ -133,7 +166,7 @@ select {
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
-  min-width: 350px;
+  min-width: 300px;
 }
 
 .list li {
@@ -171,6 +204,42 @@ select {
   transition: opacity 0.3s ease;
 }
 
+.list li:hover {
+  color: #008FFB;
+}
+
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+
+@media (min-width: 600px) {
+  .transactions-container {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  .subheader {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 94%;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .subheader {
+    font-size: 1rem;
+  }
 }
