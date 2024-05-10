@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install backend dependencies
+npm install
+
 # Navigate to the client directory
 cd client
 
