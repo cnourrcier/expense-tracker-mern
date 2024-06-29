@@ -2,6 +2,11 @@
 
 Expense Tracker allows users to track their incomes and expenses, view a list of positive and negative transactions, and see their total income, total expenses, and overall balance.
 
+- [Project Demo](https://expense-tracker-mern-41ga.onrender.com)
+- [Portfolio](https://charlie-nourrcier-dev-portfolio.onrender.com)
+
+![Project Demo](https://res.cloudinary.com/dwguf4w1t/image/upload/v1719692435/Portfolio%20Projects/expensetracker_sko0s5.gif)
+
 ## Features
 
 - Add new income or expense transactions.
